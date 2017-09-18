@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Nicolas Byl
-  description: '@TODO name this role'
+  description: 'install minishift'
   company: codecentric AG
   license:
     - MIT
