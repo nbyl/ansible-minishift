@@ -1,8 +1,8 @@
-nbyl.rolename
+nbyl.minishift
 =========
-[![Build Status](https://travis-ci.org/nbyl/ansible-rolename.svg?branch=master)](https://travis-ci.org/nbyl/ansible-rolename)
+[![Build Status](https://travis-ci.org/nbyl/ansible-minishift.svg?branch=master)](https://travis-ci.org/nbyl/ansible-minishift)
 
-A brief description of the nbyl.rolename goes here.
+A brief description of the nbyl.minishift goes here.
 
 Requirements
 ------------
@@ -25,7 +25,7 @@ Example Playbook
 ```yml
 - hosts: servers
   roles:
-    - nbyl.rolename
+    - nbyl.minishift
 ```
 
 License
