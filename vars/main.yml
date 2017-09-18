@@ -1,2 +1,8 @@
 ---
 # vars file for minishift
+minishift_exe: minishift-{{minishift_version}}-{{minishift_platform}}
+minishift_tgz: '{{minishift_exe}}.tgz'
+minishift_url: '{{minishift_mirror}}/v{{minishift_version}}/{{minishift_tgz}}'
+minishift_install_dir: '{{minishift_bin_dir}}/{{minishift_exe}}'
+minishift_checksum: '{{minishift_checksums[minishift_platform]}}'
+minishift_install_target: '{{minishift_install_dir}}/{{minishift_exe}}-{{minishift_version}}'

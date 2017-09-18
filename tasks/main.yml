@@ -1,11 +1,35 @@
 ---
-- name: resolve platform specific vars
-  include_vars: '{{item}}'
-  with_first_found:
-    - files:
-        - '{{ansible_distribution}}-{{ansible_distribution_release}}.yml'
-        - '{{ansible_distribution}}.yml'
-        - '{{ansible_os_family}}.yml'
-      skip: true
-      paths:
-        - '{{role_path}}/vars'
+- name: download
+  become: yes
+  become_user: root
+  get_url:
+    url: '{{minishift_url}}'
+    dest: '/tmp/{{minishift_tgz}}'
+    checksum: '{{minishift_checksum}}'
+    mode: 0755
+
+- name: make install dir
+  become: yes
+  become_user: root
+  file:
+    path: '{{minishift_install_dir}}'
+    state: directory
+    mode: 0755
+
+- name: unarchive
+  become: yes
+  become_user: root
+  unarchive:
+    copy: no
+    src: /tmp/{{minishift_tgz}}
+    dest: '{{minishift_install_dir}}'
+    creates: '{{minishift_install_dir}}/minishift'
+
+
+- name: link
+  become: yes
+  become_user: root
+  file:
+    src: '{{minishift_install_dir}}/minishift'
+    dest: '{{minishift_bin_dir}}/minishift'
+    state: link

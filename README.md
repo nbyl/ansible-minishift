@@ -1,8 +1,8 @@
-andrewrothstein.rolename
+nbyl.rolename
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-rolename.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-rolename)
+[![Build Status](https://travis-ci.org/nbyl/ansible-rolename.svg?branch=master)](https://travis-ci.org/nbyl/ansible-rolename)
 
-A brief description of the andrewrothstein.rolename goes here.
+A brief description of the nbyl.rolename goes here.
 
 Requirements
 ------------
@@ -25,7 +25,7 @@ Example Playbook
 ```yml
 - hosts: servers
   roles:
-    - andrewrothstein.rolename
+    - nbyl.rolename
 ```
 
 License
@@ -36,4 +36,4 @@ MIT
 Author Information
 ------------------
 
-Andrew Rothstein <andrew.rothstein@gmail.com>
+Nicolas Byl <nico@nicolas-byl.eu>

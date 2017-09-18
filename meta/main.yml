@@ -1,8 +1,8 @@
 ---
 galaxy_info:
-  author: Andrew Rothstein
+  author: Nicolas Byl
   description: '@TODO name this role'
-  company: Core Dump
+  company: codecentric AG
   license:
     - MIT
   min_ansible_version: 2.0
