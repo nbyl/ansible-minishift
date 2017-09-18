@@ -29,4 +29,6 @@ galaxy_info:
   galaxy_tags:
     - development
 
-dependencies: []
+  dependencies:
+    - src: andrewrothstein.unarchive-deps
+      version: v1.0.9
